@@ -1,0 +1,21 @@
+.main {
+  padding: 20px;
+  border-radius: 30px 30px 0 0;
+  background-color: var(--bgColor-1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Responsive Main */
+@media (max-width: 768px) {
+  .main {
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    gap: 15px;
+    padding-bottom: 130px; /* For fixed genre bar */
+    margin-bottom: 0;
+  }
+}
+

@@ -1,0 +1,263 @@
+.main-card {
+  position: relative;
+  border-radius: var(--raduis_1);
+  height: 550px;
+  overflow: hidden;
+}
+
+.main-card .img-cover {
+  height: 100%;
+  border-radius: var(--raduis_1);
+  pointer-events: none;
+  object-fit: cover;
+  object-position: top;
+}
+
+.main-card::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #000000d3, transparent);
+  z-index: 2;
+  border-radius: var(--raduis_1);
+}
+
+.main-card .main-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100px 70px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+}
+
+.main-card h3 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  max-width: 450px;
+  line-height: 1.2;
+}
+
+.review {
+  font-weight: 700;
+  background-color: rgb(41, 40, 40);
+  padding: 1px 5px;
+  border-radius: var(--raduis_2);
+  color: var(--goldcolor);
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.light-gray {
+  color: var(--offwhite);
+  font-size: 20px;
+}
+
+.watch-btn {
+  background-color: var(--blueColor);
+  padding: 10px 15px;
+  border-radius: var(--raduis_2);
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.watch-btn:hover {
+  background-color: #1a9bc7;
+  transform: translateY(-2px);
+}
+
+/* sub-cards */
+
+.sub-cards {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  bottom: 20px;
+  z-index: 100;
+  right: 20px;
+  max-width: 500px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.sub-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.sub-cards .card-item {
+  position: relative;
+  min-width: 100px;
+  height: 156.4px;
+  border-radius: var(--raduis_3);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sub-cards .card-item:hover {
+  transform: scale(1.05);
+}
+
+.sub-cards .card-item:not(.card-item.active)::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.595);
+  border-radius: var(--raduis_3);
+}
+
+.sub-cards .card-item img {
+  height: 100%;
+  border-radius: var(--raduis_3);
+}
+
+/* Responsive MovieShowcase */
+@media (max-width: 1200px) {
+  .main-card {
+    height: 500px;
+  }
+  
+  .main-card .main-card-content {
+    padding: 80px 50px;
+  }
+  
+  .main-card h3 {
+    font-size: 35px;
+    max-width: 400px;
+  }
+  
+  .light-gray {
+    font-size: 18px;
+  }
+  
+  .watch-btn {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    height: 400px;
+    border-radius: 20px;
+  }
+  
+  .main-card .img-cover {
+    border-radius: 20px;
+  }
+  
+  .main-card::after {
+    border-radius: 20px;
+  }
+  
+  .main-card .main-card-content {
+    padding: 60px 30px;
+    gap: 12px;
+  }
+  
+  .main-card h3 {
+    font-size: 28px;
+    max-width: 100%;
+  }
+  
+  .description {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  
+  .light-gray {
+    font-size: 16px;
+  }
+  
+  .watch-btn {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  .sub-cards {
+    bottom: 15px;
+    right: 15px;
+    gap: 15px;
+    max-width: 300px;
+  }
+  
+  .sub-cards .card-item {
+    min-width: 80px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card {
+    height: 350px;
+    border-radius: 15px;
+  }
+  
+  .main-card .img-cover {
+    border-radius: 15px;
+  }
+  
+  .main-card::after {
+    border-radius: 15px;
+  }
+  
+  .main-card .main-card-content {
+    padding: 40px 20px;
+    gap: 10px;
+  }
+  
+  .main-card h3 {
+    font-size: 24px;
+  }
+  
+  .description {
+    font-size: 13px;
+  }
+  
+  .light-gray {
+    font-size: 14px;
+  }
+  
+  .watch-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+  .sub-cards {
+    bottom: 10px;
+    right: 10px;
+    gap: 10px;
+    max-width: 250px;
+  }
+  
+  .sub-cards .card-item {
+    min-width: 70px;
+    height: 100px;
+  }
+}
