@@ -107,7 +107,7 @@ h3 {
 
 @media (max-width: 768px) {
   .container {
-  padding-bottom: 150px;
+  margin-bottom: 200px;
   } 
    
   .container h2 {

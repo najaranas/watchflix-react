@@ -208,7 +208,7 @@ iframe {
 @media (max-width: 768px) {
   .MovieDetails {
     padding: 15px;
-    margin-bottom: 80px;
+    margin-bottom: 200px;
   }
   
   .main-movie-details {

@@ -97,12 +97,21 @@ export default function MovieShowcase({ UpdatePathName, UpdateData }) {
             <span>Watch Now</span>
           </button>
         </Link>
-      </div>
-      <SubCards
+
+        <div style={{width:"100%",justifyContent:"flex-end",display:"flex",marginTop:"10px"}}>
+
+         <SubCards
         data={popularMovies}
         defvalue={defvalue}
         updateMainMovie={updateMainMovie}
-      />
+        />
+        </div>
+      </div>
+      {/* <SubCards
+        data={popularMovies}
+        defvalue={defvalue}
+        updateMainMovie={updateMainMovie}
+      /> */}
     </div>
   );
 }
