@@ -58,7 +58,7 @@ export default function MovieCategories({
             );
           })
         ) : (
-          <h2>No movies found</h2>
+          <h3 className="no-movies">No movies found</h3>
         )}
       </div>
     </div>

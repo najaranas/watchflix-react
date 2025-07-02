@@ -40,7 +40,7 @@ A modern, responsive movie streaming platform built with React that provides use
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/watchflix.git
+   git clone https://github.com/najaranas/watchflix.git
    cd watchflix
    ```
 

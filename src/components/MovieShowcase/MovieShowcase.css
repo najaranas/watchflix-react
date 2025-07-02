@@ -113,15 +113,19 @@
   height: 156.4px;
   border-radius: var(--raduis_3);
   cursor: pointer;
-  transition: 0.3s ease;
   overflow: hidden;
-  background-color: red;
 }
 
-.sub-cards .card-item:hover {
-  transform: scale(1.05);
+.sub-cards .card-item img {
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.sub-cards .card-item img:hover {
+  transform: scale(1.3) rotate(10deg);
 
 }
+
 
 .sub-cards .card-item:not(.card-item.active)::after {
   position: absolute;
@@ -132,6 +136,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.595);
   border-radius: var(--raduis_3);
+  pointer-events: none;
 }
 
 .sub-cards .card-item img {
